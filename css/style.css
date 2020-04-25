@@ -12,6 +12,7 @@ body {
     color: white;
     font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
     scroll-behavior: smooth;
+    padding-right: 10px;
 }
 
 .light {
@@ -60,6 +61,7 @@ body {
     border-radius: 2px;
     transform-origin: right;
     transition: all .2s ease-in;
+    box-shadow: 2px 2px 0px 0px #e21c3b;
 }
 
 .middle {
@@ -68,15 +70,18 @@ body {
 
 .active .top {
     transform: rotate(-45deg);
+    box-shadow: none;
 }
 
 .active .bottom {
     transform: rotate(45deg);
+    box-shadow: none;
 }
 
 .active .middle {
     transform: translateX(200px);
     opacity: 0;
+    box-shadow: none;
 }
 
 .nav {
@@ -89,7 +94,7 @@ body {
     background-color: black;
     padding-right: 7.3%;
     padding-bottom: 100px;
-    padding-top: 40%;
+    padding-top: 25vh;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -130,9 +135,17 @@ body {
     text-decoration: none;
 }
 
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .social a {
     text-decoration: none;
     padding: 5px;
+    width: 40px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,6 +169,8 @@ body {
     height: 60%;
     align-items: flex-end;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero img {
@@ -170,20 +185,20 @@ body {
 
 .content h3 {
     font-size: 30px;
-    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1000 - 300)));
+    font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1000 - 300)));
     font-weight: 400;
 }
 
 .content p {
     font-size: 2.5vh;
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1000 - 300)));
+    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1000 - 300)));
     padding-top: 2%;
     padding-bottom: 1.5%;
 }
 
 .content a {
     font-size: 18px;
-    font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1000 - 300)));
+    font-size: calc(18px + (25 - 18) * ((100vw - 300px) / (1000 - 300)));
     color: #E20F37;
     text-decoration: none;
     position: relative;
@@ -262,6 +277,7 @@ a:hover .arrow {
 
 .dos {
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .dos .arrow {
@@ -305,6 +321,10 @@ a:hover .arrow {
 .contact .content p, .contact .content a {
     color: #707070;
     font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1000 - 300)));
+}
+
+.contact a {
+    padding: 0;
 }
 
 .contact h3 {
@@ -353,6 +373,24 @@ input[type='button']:hover, input[type='button']:focus {
     box-shadow: 0px 0px 20px 2px #e20f37e6;
 }
 
+.overlay {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: block;
+}
+
+.wrap {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 @media only screen and (min-width:768px) {
     .header {
         height: 50px;
@@ -381,14 +419,14 @@ input[type='button']:hover, input[type='button']:focus {
         max-width: 550px;
     }
     .content h3 {
-        font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1000 - 300)));
+        font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1000 - 300)));
     }
     .content p {
-        font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1000 - 300)));
+        font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
         line-height: 150%;
     }
     .content a {
-        font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1000 - 300)));
+        font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1000 - 300)));
     }
     .main p {
         padding-top: 3%;
@@ -453,6 +491,8 @@ input[type='button']:hover, input[type='button']:focus {
         font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
         padding: 0;
         line-height: 100%;
+        padding: 5px 0;
+        padding-right: 50px;
     }
     .dos {
         position: initial;
@@ -548,6 +588,10 @@ input[type='button']:hover, input[type='button']:focus {
     .social a {
         border-bottom: 2px solid transparent;
         transition: border .2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .social a:hover {
         border-bottom: 2px solid #E20F37;
