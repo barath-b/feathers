@@ -43,6 +43,8 @@ $(document).ready(function () {
         $('<div class="overlay"></div>').insertAfter(e);
     });
     setInView();
+    gsap.to("#container", 0.5, { display: "block", ease: Power4.easeIn })
+    gsap.to("#overlay", 0.5, { display: "none", autoalpha: 0, ease: Power4.easeIn })
 });
 
 function onScroll(event) {

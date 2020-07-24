@@ -15,6 +15,16 @@ body {
     padding-right: 10px;
 }
 
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 99;
+}
+
 .light {
     font-weight: 300;
 }
@@ -185,20 +195,20 @@ body {
 
 .content h3 {
     font-size: 30px;
-    font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1000 - 300)));
+    font-size: calc(18px + (45 - 35) * ((100vw - 300px) / (1000 - 300)));
     font-weight: 400;
 }
 
 .content p {
     font-size: 2.5vh;
-    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1000 - 300)));
-    padding-top: 2%;
-    padding-bottom: 1.5%;
+    font-size: calc(14px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .content a {
     font-size: 18px;
-    font-size: calc(18px + (25 - 18) * ((100vw - 300px) / (1000 - 300)));
+    font-size: calc(16px + (25 - 18) * ((100vw - 300px) / (1000 - 300)));
     color: #E20F37;
     text-decoration: none;
     position: relative;
@@ -209,7 +219,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
+    width: 18px;
     height: 3px;
     margin-left: 15px;
     border-radius: 5px;
@@ -221,8 +231,8 @@ body {
 .arrow:after {
     content: '';
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     position: absolute;
     right: 0;
     border-bottom: 3px solid #E20F37;
@@ -230,7 +240,7 @@ body {
     box-sizing: border-box;
     top: 52%;
     transform: translateY(-50%) rotate(-45deg);
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 a:hover .arrow {
@@ -419,18 +429,18 @@ input[type='button']:hover, input[type='button']:focus {
         max-width: 550px;
     }
     .content h3 {
-        font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1000 - 300)));
+        font-size: calc(22px + (40 - 30) * ((100vw - 300px) / (1000 - 300)));
     }
     .content p {
-        font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
+        font-size: calc(14px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
         line-height: 150%;
     }
     .content a {
         font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (1000 - 300)));
     }
     .main p {
-        padding-top: 3%;
-        padding-bottom: 2.5%;
+        padding-top: 1%;
+        padding-bottom: 0.5%;
     }
     .about {
         position: relative;
@@ -488,7 +498,6 @@ input[type='button']:hover, input[type='button']:focus {
         margin: 0;
     }
     .what p {
-        font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1000 - 300)));
         padding: 0;
         line-height: 100%;
         padding: 5px 0;
